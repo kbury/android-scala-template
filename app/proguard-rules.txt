@@ -1,6 +1,9 @@
 -dontoptimize
 -dontobfuscate
 -dontpreverify
--dontwarn scala.**
--keep class !scala*.** { *; }
+-dontnote
+-keepattributes
 -ignorewarnings
+-keep class scala.ScalaObject {
+    public protected *;
+}
